@@ -1,89 +1,121 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    width: 150px;
+    height: 100vh;
+    background-color: black;
+    border-right: 1px solid #ccc;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-item {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+.sidebar-item:hover {
+    background-color: #333;
+}
+
+/* Main Container */
 .pagesection {
     background-color: aliceblue;
-    position: relative;
     width: calc(100% - 150px);
-    height: 4080px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    left: 150px;
-    overflow: hidden;
+    height: 100vh;
+    margin-left: 150px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
-.page{
-    height:700px;
-    width:100%;
-    position: absolute;
+
+/* Each Page Section */
+.page {
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    scroll-snap-align: start;
 }
-#page-0{
-    background-color: lightgray;
-    top: 0px;
-   
-    
-}
-#page-1{
+
+/* Individual Pages */
+#page-0 { background-color: lightgray; }
+#page-1 { 
     background-color: lightblue;
-    top: 700px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 30px;
 }
-.profile-info{
+#page-1 img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+}
+.profile-info {
     padding-right: 20px;
 }
-#page-1 img{
-    width: 500px;
-    height: 500px;
-    border-radius: 50px;
-    
-}
- 
-#page-2{
-    background-color: lightgreen;
-    top: 1400px
-    
-}
-#page-3{
+
+#page-2 { background-color: lightgreen; }
+#page-3 { 
     background-color: lightcoral;
-    top: 2100px;
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
-.project-container{
+.project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.project-info{
+.project-info {
     padding: 20px;
     margin: 10px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-    cursor: pointer; /* Change cursor to pointer on hover */
-    text-align: center; /* Center the text */
-    font-size: 16px; /* Optional: adjust font size */
-    align-items: center; /* Center the text */
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
 }
-.project-info:hover{
+.project-info:hover {
     background-color: lightblue;
 }
-#page-3 img{
+#page-3 img {
     width: 100px;
     height: 100px;
     border-radius: 50px;
 }
-#page-4{
-    background-color: lightpink;
-    top: 2800px;
-   
+#page-4 { background-color: lightpink; }
+#page-5 { background-color: lightyellow; }
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .pagesection {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #page-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .profile-info {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #page-1 img, #page-3 img {
+        display: none;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
 }
-#page-5{
-    background-color: lightyellow;
-    top: 3500px;
-    bottom:0;
-}
+/* General Styles */

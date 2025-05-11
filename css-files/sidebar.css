@@ -26,3 +26,17 @@
 .sidebar-item:hover {
     background-color: #525151; /* Optional: hover effect */
 }
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height */
+        position: relative; /* Change to relative */
+        border-right: none; /* Remove right border */
+        display:none;
+    }
+    .sidebar-item {
+        display: inline-block; /* Display items inline */
+        width: auto; /* Auto width */
+    }
+    
+}
