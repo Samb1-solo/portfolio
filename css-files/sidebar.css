@@ -1,0 +1,28 @@
+.sidebar {
+    position: fixed; /* Make it stick to the side of the screen */
+    width: 150px;
+    height: 100vh; /* Full height of the viewport */
+    background-color: black;
+    border-right: 1px solid #ccc;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto; /* Optional: scroll if content overflows */
+    z-index: 1000; /* Optional: ensure it stays above other elements */
+}
+
+.sidebar-item {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Optional: adjust font size */
+    height: 115px; /* Optional: fixed height for each item */
+}
+
+.sidebar-item:hover {
+    background-color: #525151; /* Optional: hover effect */
+}

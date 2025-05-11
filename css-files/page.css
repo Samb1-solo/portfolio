@@ -1,0 +1,89 @@
+.pagesection {
+    background-color: aliceblue;
+    position: relative;
+    width: calc(100% - 150px);
+    height: 4080px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    left: 150px;
+    overflow: hidden;
+}
+.page{
+    height:700px;
+    width:100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#page-0{
+    background-color: lightgray;
+    top: 0px;
+   
+    
+}
+#page-1{
+    background-color: lightblue;
+    top: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
+.profile-info{
+    padding-right: 20px;
+}
+#page-1 img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    
+}
+ 
+#page-2{
+    background-color: lightgreen;
+    top: 1400px
+    
+}
+#page-3{
+    background-color: lightcoral;
+    top: 2100px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.project-info{
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Optional: adjust font size */
+    align-items: center; /* Center the text */
+}
+.project-info:hover{
+    background-color: lightblue;
+}
+#page-3 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+#page-4{
+    background-color: lightpink;
+    top: 2800px;
+   
+}
+#page-5{
+    background-color: lightyellow;
+    top: 3500px;
+    bottom:0;
+}
